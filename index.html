@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xenial Events — Service Wheel concept</title>
+<meta name="description" content="Concept prototype: a homepage hero that puts all six Xenial Events services in front of visitors, not just staffing.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- full-page colour layers -->
+<div class="flood" aria-hidden="true"></div>
+<div class="ripples" aria-hidden="true"></div>
+<div class="wipe" aria-hidden="true"><span class="wipe__label"></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- intro -->
+<div class="intro" aria-hidden="true">
+  <svg class="intro__mark" viewBox="0 0 516 338" width="150">
+    <path class="ix" d="M0 0H58L144 134L207 0H266L176 156L276 338H216L146 211L68 338H9L116 157L0 0Z" fill="#35B8C5"/>
+    <path class="ie" d="M309 0H516V55H364L309 0Z" fill="#F57B20"/>
+    <path class="ie" d="M300 138H516V195H300V138Z" fill="#F57B20"/>
+    <path class="ie" d="M352 275H516V338H299L352 275Z" fill="#F57B20"/>
+    <path class="io" d="M146 100H221L189 157H126L146 100Z" fill="#F57B20"/>
+    <path class="io" d="M190 11C218.719 11 242 34.2812 242 63C242 91.7188 218.719 115 190 115C161.281 115 138 91.7188 138 63C138 34.2812 161.281 11 190 11ZM190 27C170.118 27 154 43.1177 154 63C154 82.8823 170.118 99 190 99C209.882 99 226 82.8823 226 63C226 43.1177 209.882 27 190 27Z" fill="#F57B20"/>
+  </svg>
+  <p class="intro__line">Six services. One team.</p>
+</div>
+
+<!-- custom cursor -->
+<div class="cursor" aria-hidden="true">
+  <div class="cursor__ring"><span class="cursor__label"></span></div>
+  <div class="cursor__dot"></div>
+</div>
+
+<header class="hdr">
+  <a class="hdr__logo" href="#/" aria-label="Xenial Events home">
+    <svg viewBox="0 0 516 338" width="46" height="30" aria-hidden="true">
+      <path d="M0 0H58L144 134L207 0H266L176 156L276 338H216L146 211L68 338H9L116 157L0 0Z" fill="#35B8C5"/>
+      <path d="M309 0H516V55H364L309 0Z" fill="#F57B20"/><path d="M300 138H516V195H300V138Z" fill="#F57B20"/>
+      <path d="M352 275H516V338H299L352 275Z" fill="#F57B20"/><path d="M146 100H221L189 157H126L146 100Z" fill="#F57B20"/>
+      <path d="M190 11C218.719 11 242 34.2812 242 63C242 91.7188 218.719 115 190 115C161.281 115 138 91.7188 138 63C138 34.2812 161.281 11 190 11ZM190 27C170.118 27 154 43.1177 154 63C154 82.8823 170.118 99 190 99C209.882 99 226 82.8823 226 63C226 43.1177 209.882 27 190 27Z" fill="#F57B20"/>
+    </svg>
+    <span>Xenial Events</span>
+  </a>
+  <nav class="hdr__nav" aria-label="Main">
+    <a href="#/" class="is-current">Services</a>
+    <a href="#lifecycle">How it fits</a>
+    <a href="#/">Work</a>
+    <a href="#/">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="hdr__cta magnetic" href="#contact"><span>Get a quote</span></a>
+</header>
+
+<!-- ============ HOME ============ -->
+<main id="home" class="view">
+  <section class="hero" aria-label="Our services">
+    <div class="hero__content">
+      <div class="hero__top">
+        <p class="hero__statement">Known for staffing. Built for the whole event.</p>
+        <div class="hero__ctrl" role="group" aria-label="Service carousel controls">
+          <button class="ctrl ctrl--prev" type="button" aria-label="Previous service">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+          </button>
+          <span class="ctrl__count"><b class="ctrl__n">1</b> of 6</span>
+          <button class="ctrl ctrl--next" type="button" aria-label="Next service">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <h1 class="bigword"><span class="sr-only">Xenial Events: <span class="sr-name">Event staffing</span></span><span class="bigword__inner" aria-hidden="true"></span></h1>
+
+      <div class="hero__cols">
+        <div class="hero__text">
+          <p class="hero__desc"><span class="hero__desc-in"></span></p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary magnetic" href="#/s/staffing" data-cta><span class="btn__fill"></span><span class="btn__label">Explore event staffing</span></a>
+            <a class="link" href="#contact">Get a quote</a>
+          </div>
+          <dl class="stats"></dl>
+        </div>
+        <div class="stage" data-cursor="Explore"></div>
+      </div>
+    </div>
+
+    <div class="wheel-wrap" data-cursor="Drag">
+      <svg class="wheel" viewBox="-540 -540 1080 1080" role="group" aria-label="Service wheel. Drag, click or use arrow keys to switch service."></svg>
+    </div>
+
+    <div class="hero__marquee" aria-label="Recent shows">
+      <span class="hero__marquee-lead">On the floor at</span>
+      <div class="marquee"><div class="marquee__track"></div></div>
+    </div>
+  </section>
+
+  <section class="lifecycle" id="lifecycle">
+    <div class="lifecycle__head">
+      <h2>One team from first permit to final teardown.</h2>
+      <p>Most events need five or six suppliers. Here is how our services line up across a typical exhibition timeline. Hover a bar to see what we handle, click to open the service.</p>
+    </div>
+    <div class="gantt" role="list"></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact__stripe" aria-hidden="true"></div>
+    <h2>Tell us about the event.<br>We'll tell you what it needs.</h2>
+    <p>People, permits, kit, build, coverage and coordination, quoted together.</p>
+    <div class="contact__row">
+      <a class="btn btn--light magnetic" href="mailto:contact@xenialevents.com"><span class="btn__fill"></span><span class="btn__label">Get a quote</span></a>
+      <a class="contact__line" href="tel:+97126660191">+971 2 666 0191</a>
+      <a class="contact__line" href="https://wa.me/971545865270">WhatsApp +971 54 586 5270</a>
+    </div>
+  </section>
+
+  <footer class="ftr">
+    <span>Abu Dhabi HQ, Dubai, Riyadh, Doha</span>
+    <span>Concept prototype for internal review. Not the live site.</span>
+  </footer>
+</main>
+
+<!-- ============ SERVICE PAGE ============ -->
+<main id="page" class="view page" hidden></main>
+
+<p class="concept-tag">Concept v1</p>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/visuals.js"></script>
+<script src="js/wheel.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
